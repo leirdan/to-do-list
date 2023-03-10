@@ -10,9 +10,14 @@
 </head>
 
 <body>
-    
-    <?php include "./components/header.html" ?>
-
+    <?php include "./html/header.html" ?>
+    <div class="container" id="root"> 
+        <?php include "./php/components/task_button.php" ?>
+        <?php 
+        $title = "elementary math";
+        $id = 1;
+        include "./php/components/task.php"?>
+    </div>
 </body>
 
 </html>
