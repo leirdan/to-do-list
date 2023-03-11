@@ -10,7 +10,7 @@
         div.removeChild(addBtn)
         // create the form 
         const form = document.createElement("form")
-        form.action = "/to-do-list/php/src/task_request.php"
+        form.action = "/to-do-list/src/task_request.php"
         form.method = "post"
         const label = document.createElement("label")
         label.className = "form-label my-2"

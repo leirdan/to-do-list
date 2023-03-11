@@ -12,11 +12,11 @@
 <body>
     <?php include "./html/header.html" ?>
     <div class="container" id="root"> 
-        <?php include "./php/components/task_button.php" ?>
+        <?php include "./components/task_button.php" ?>
         <?php 
         $title = "elementary math";
         $id = 1;
-        include "./php/components/task.php"?>
+        include "./components/task.php"?>
     </div>
 </body>
 
