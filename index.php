@@ -13,10 +13,6 @@
     <?php include "./html/header.html" ?>
     <div class="container" id="root"> 
         <?php include "./components/task_button.php" ?>
-        <?php 
-        $title = "elementary math";
-        $id = 1;
-        include "./components/task.php"?>
     </div>
 </body>
 

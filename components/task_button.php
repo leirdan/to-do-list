@@ -10,7 +10,7 @@
         div.removeChild(addBtn)
         // create the form 
         const form = document.createElement("form")
-        form.action = "/to-do-list/src/task_request.php"
+        form.action = ""
         form.method = "post"
         const label = document.createElement("label")
         label.className = "form-label my-2"
@@ -30,3 +30,35 @@
         div.appendChild(form)
     }
 </script>
+
+<?php 
+if(!empty($_POST)) 
+{
+    $title = $_POST["title"];
+    if (isset($title)) 
+    {
+        printTask($title, 4);
+    } 
+    else 
+    {
+        echo "
+            <div class='alert alert-warning text-center' role='alert'>
+              <h4 class='alert-heading'>ERRO ENCONTRADO</h4>
+              <p>Insira um nome pra tarefa!</p>
+            </div>";
+        }
+}
+
+function printTask($title, $id) 
+{
+    echo "
+    <div class='form-check'>
+        <input type='hidden' name='id' value={$id}>
+        <input class='form-check-input' type='checkbox' id='input-checkbox'>
+        <label class='form-check-label' for='input-checkbox'> {$title}
+        </label>
+    </div>
+    ";
+}
+?>
+
